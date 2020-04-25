@@ -1,0 +1,19 @@
+{
+    "display": {
+        "title": "Gnottero's Tweaks v1.0.0",
+        "description": [{
+            "text": "Gnottero's Tweaks by Gnottero"
+        }],
+        "icon": {
+            "item": "minecraft:crafting_table"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "gnottero:gnottero",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

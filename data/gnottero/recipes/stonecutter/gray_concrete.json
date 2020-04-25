@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "tag": "gnottero:concrete_blocks"
+    },
+    "result": "minecraft:gray_concrete",
+    "count": 1
+}

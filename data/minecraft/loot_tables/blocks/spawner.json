@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:item_frame",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
+                  {
+                    "enchantment": "minecraft:silk_touch"
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "config": 1
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Spawner\",\"italic\":false}'},ctc: {id: \"spawner\", from: \"gnottero:gnotteros_tweaks\",traits:[\"block\",\"spawner\"]},CustomModelData:1280001,EntityTag:{Invisible:1b,Item:{id:\"minecraft:spawner\",Count:1b,tag:{BlockEntityTag:{}}},Tags:[\"gn.place_spawner\",\"global.ignore\",\"global.ignore.pos\"]}}"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "SpawnPotentials",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.SpawnPotentials",
+                  "op": "replace"
+                },
+                {
+                  "source": "SpawnData",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.SpawnData",
+                  "op": "replace"
+                },
+                {
+                  "source": "SpawnCount",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.SpawnCount",
+                  "op": "replace"
+                },
+                {
+                  "source": "SpawnRange",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.SpawnRange",
+                  "op": "replace"
+                },
+                {
+                  "source": "MinSpawnDelay",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.MinSpawnDelay",
+                  "op": "replace"
+                },
+                {
+                  "source": "MaxSpawnDelay",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.MaxSpawnDelay",
+                  "op": "replace"
+                },
+                {
+                  "source": "MaxNearbyEntities",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.MaxNearbyEntities",
+                  "op": "replace"
+                },
+                {
+                  "source": "RequiredPlayerRange",
+                  "target": "EntityTag.Item.tag.BlockEntityTag.RequiredPlayerRange",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

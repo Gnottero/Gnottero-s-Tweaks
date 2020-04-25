@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "RRW",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "tag": "gnottero:stone_blocks"
+        },
+        "W": {
+            "item": "minecraft:quartz"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "minecraft:observer",
+        "count": 1
+    }
+}
